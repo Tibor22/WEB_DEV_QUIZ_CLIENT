@@ -1,0 +1,32 @@
+// Google fonts (Poppins and Montserrat)
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+// set up variables
+$color-primary: #aac4ff;
+$color-primary-dark: #b1b2ff;
+$color-primary-light: #d2daff;
+$color-primary-extra-light: #eef1ff;
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Poppins', sans-serif;
+
+:root {
+	--color-primary: #{$color-primary};
+	--color-primary-dark: #{$color-primary-dark};
+	--color-primary-light: #{$color-primary-light};
+	--color-primary-extra-light: #{$color-primary-extra-light};
+	--font-family-secondary: #{$font-family-secondary};
+}
+
+// base reset
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// managing font styles
+
+html {
+	font-size: 62.5%; // 1rem exactly 10px
+	font-family: var(--font-family-primary);
+}
