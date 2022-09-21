@@ -1,0 +1,34 @@
+.footer-outer-container {
+  background-color: rgb(49, 47, 47);
+  height: 10rem;
+}
+.footer-outer-container .footer-container {
+  max-width: 120rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-outer-container .footer-container__reference {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-family: var(--font-family-primary);
+}
+.footer-outer-container .footer-container__reference .github-link {
+  display: block;
+}
+.footer-outer-container .footer-container__reference .creator-link {
+  text-decoration: none;
+  color: var(--color-primary-extra-light);
+  font-weight: 600;
+  font-style: italic;
+  transition: all 0.5s;
+  display: inline-block;
+}
+.footer-outer-container .footer-container__reference .creator-link:hover {
+  transform: translateY(-2px);
+  color: var(--color-primary-light);
+}/*# sourceMappingURL=footer.css.map */

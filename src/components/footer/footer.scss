@@ -1,0 +1,36 @@
+.footer-outer-container {
+	background-color: rgb(49, 47, 47);
+	height: 10rem;
+
+	& .footer-container {
+		max-width: 120rem;
+
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		flex-direction: column;
+		&__reference {
+			color: white;
+			margin-top: 1rem;
+			font-size: 1.8rem;
+			font-family: var(--font-family-primary);
+			& .github-link {
+				display: block;
+			}
+			& .creator-link {
+				text-decoration: none;
+				color: var(--color-primary-extra-light);
+				font-weight: 600;
+				font-style: italic;
+				transition: all 0.5s;
+				display: inline-block;
+				&:hover {
+					transform: translateY(-2px);
+					color: var(--color-primary-light);
+				}
+			}
+		}
+	}
+}

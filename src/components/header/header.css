@@ -2,8 +2,7 @@
   background-color: var(--color-primary);
   font-size: 2rem;
 }
-
-.header-container {
+.header-outer-container .header-container {
   background-color: var(--color-primary);
   height: 8rem;
   max-width: 120rem;
@@ -12,8 +11,7 @@
   align-items: center;
   justify-content: center;
 }
-
-.header-container-flex {
+.header-outer-container .header-container-flex {
   background-color: var(--color-primary);
   height: 8rem;
   display: flex;
