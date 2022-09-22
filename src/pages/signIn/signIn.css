@@ -52,7 +52,7 @@
   height: 55px;
 }
 .signIn-component__login-btns .sign-in-btn:hover {
-  background-color: rgba(6, 6, 6, 0.047);
+  background-color: var(--color-primary-extra-light);
   cursor: pointer;
 }
 .signIn-component__login-btns .sign-in-btn .google-text {
