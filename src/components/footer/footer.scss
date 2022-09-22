@@ -1,5 +1,5 @@
 .footer-outer-container {
-	background-color: rgb(49, 47, 47);
+	background-color: #312f2f;
 	height: 10rem;
 
 	& .footer-container {
@@ -33,4 +33,13 @@
 			}
 		}
 	}
+}
+
+.peaks-container {
+	aspect-ratio: 1500/150;
+	max-width: 100vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../../assets/peaks2-svg.svg');
 }
