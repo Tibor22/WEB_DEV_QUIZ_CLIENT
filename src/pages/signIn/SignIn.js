@@ -1,9 +1,17 @@
 import './signIn.css';
 import { FcGoogle } from 'react-icons/fc';
+import axios from 'axios';
 export default function SignIn() {
-	const styles = {
-		marginRight: '2rem',
+	const url = process.env.REACT_APP_API_URL;
+	const handleLogin = async (e) => {
+		if (e.target.closest('.sign-in-btn').classList.contains('google-btn')) {
+			const data = await axios(url + '/auth/google');
+			console.log(data);
+		} else {
+			console.log('Sign In as guest');
+		}
 	};
+
 	return (
 		<div className='signIn-outer-container'>
 			<div className='signIn-container'>
@@ -14,16 +22,18 @@ export default function SignIn() {
 						gain access to your password or private information.
 					</p>
 					<div className='signIn-component__login-btns'>
-						<button className='google-btn sign-in-btn'>
+						<button onClick={handleLogin} className='google-btn sign-in-btn'>
 							<div className='google-icon'>
 								{' '}
-								<FcGoogle size='2.3rem' styles={styles} />
+								<FcGoogle size='2.3rem' />
 							</div>
 
 							<span className='google-text'>Sign in with Google</span>
 						</button>
 						<div className='divider'>OR</div>
-						<button className='sign-in-btn'>Sign in as guest</button>
+						<button onClick={handleLogin} className='sign-in-btn'>
+							Sign in as guest
+						</button>
 					</div>
 				</div>
 			</div>
