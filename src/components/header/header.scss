@@ -27,5 +27,17 @@
 				height: 100%;
 			}
 		}
+
+		& .user-details {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		& .userImg {
+			width: 6rem;
+			height: 6rem;
+			border-radius: 50%;
+		}
 	}
 }

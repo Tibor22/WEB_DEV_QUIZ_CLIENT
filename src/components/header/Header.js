@@ -7,13 +7,30 @@ export default function Header() {
 	const [state, data] = useContext(UserContext);
 
 	return (
-		<div className='header-outer-container'>
+		<nav className='header-outer-container'>
 			{state.isLoggedIn && (
 				<div className='header-container-flex'>
 					<div className='logo'>
 						<img src={logo} alt='' />
 					</div>
-					<div className='username'>Username</div>
+					<div className='user-details'>
+						<div className='username'>{state.user.name}</div>
+						{state.user.img && (
+							<img
+								className='userImg'
+								crossorigin='anonymous'
+								src={state.user.img}
+								alt=''
+							></img>
+						)}
+						{!state.user.img && (
+							<img
+								className='userImg'
+								src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
+								alt='Girl in a jacket'
+							></img>
+						)}
+					</div>
 				</div>
 			)}
 			{!state.isLoggedIn && (
@@ -21,6 +38,6 @@ export default function Header() {
 					<img src={logo} alt='' />
 				</div>
 			)}
-		</div>
+		</nav>
 	);
 }

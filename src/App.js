@@ -1,14 +1,26 @@
 import './App.css';
-import Header from './components/header/Header.js';
+
 import SignIn from './pages/signIn/SignIn.js';
-import Footer from './components/footer/Footer.js';
+import Lobby from './pages/lobby/Lobby.js';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <SignIn />,
+	},
+	{
+		path: '/lobby',
+		element: <Lobby />,
+	},
+]);
 
 function App() {
 	return (
 		<div className='App'>
-			{/* <Header /> */}
-			<SignIn />
-			{/* <Footer /> */}
+			<RouterProvider router={router} />
 		</div>
 	);
 }

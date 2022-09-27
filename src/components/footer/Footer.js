@@ -5,7 +5,7 @@ export default function Footer() {
 	return (
 		<>
 			<div className='peaks-container'></div>
-			<div className='footer-outer-container'>
+			<footer className='footer-outer-container'>
 				<div className='footer-container'>
 					<div className='footer-container__reference'>
 						<a
@@ -35,7 +35,7 @@ export default function Footer() {
 						</a>
 					</div>
 				</div>
-			</div>
+			</footer>
 		</>
 	);
 }

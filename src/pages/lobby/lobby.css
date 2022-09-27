@@ -1,0 +1,7 @@
+.lobby-outer-container {
+  background-color: var(--color-primary-light);
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 8rem 1fr auto 10rem;
+  border: 5px solid red;
+}/*# sourceMappingURL=lobby.css.map */

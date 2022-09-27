@@ -49,6 +49,18 @@
 		justify-content: center;
 		gap: 2rem;
 
+		a {
+			text-decoration: none;
+
+			font-size: 1.3rem;
+
+			& .google-text {
+				display: inline-block;
+				margin-left: 0.8rem;
+				color: black;
+			}
+		}
+
 		& .sign-in-btn {
 			padding: 1.6rem;
 			background-color: white;
@@ -58,15 +70,11 @@
 			align-items: center;
 			justify-content: center;
 			height: 55px;
+			font-family: var(--font-family-primary);
 
 			&:hover {
 				background-color: var(--color-primary-extra-light);
 				cursor: pointer;
-			}
-
-			& .google-text {
-				display: inline-block;
-				margin-left: 0.8rem;
 			}
 
 			& .google-icon {
