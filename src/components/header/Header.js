@@ -2,26 +2,40 @@ import './header.css';
 import logo from '../../assets/logo2.png';
 import { UserContext } from '../../context/userContext';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Header() {
-	const [state, data] = useContext(UserContext);
+	const [state, dispatch] = useContext(UserContext);
+	const url = process.env.REACT_APP_API_URL;
+	const navigate = useNavigate();
+	async function logout() {
+		try {
+			const data = await axios(`${url}/auth/logout`, {
+				withCredentials: true,
+			});
+		} catch (err) {
+			console.log(err);
+		}
+
+		dispatch({ type: 'LOGOUT', payload: {} });
+		navigate('/');
+	}
 
 	return (
 		<nav className='header-outer-container'>
 			{state.isLoggedIn && (
 				<div className='header-container-flex'>
+					<button onClick={logout} className='logout'>
+						Logout
+					</button>
 					<div className='logo'>
 						<img src={logo} alt='' />
 					</div>
 					<div className='user-details'>
 						<div className='username'>{state.user.name}</div>
 						{state.user.img && (
-							<img
-								className='userImg'
-								crossorigin='anonymous'
-								src={state.user.img}
-								alt=''
-							></img>
+							<img className='userImg' src={state.user.img} alt=''></img>
 						)}
 						{!state.user.img && (
 							<img

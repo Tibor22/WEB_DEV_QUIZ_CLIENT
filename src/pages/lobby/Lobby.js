@@ -8,11 +8,14 @@ import './lobby.css';
 export default function Lobby() {
 	const url = process.env.REACT_APP_API_URL;
 	const [state, dispatch] = useContext(UserContext);
+
 	useEffect(() => {
 		async function fetchUser() {
-			const data = await axios(url + '/user', { withCredentials: true });
+			if (!state.isLoggedIn) {
+				const data = await axios(url + '/user', { withCredentials: true });
 
-			dispatch({ type: 'LOGIN', payload: { ...data.data.data } });
+				dispatch({ type: 'LOGIN', payload: { ...data.data.data } });
+			}
 		}
 		fetchUser();
 	}, []);
