@@ -2,14 +2,18 @@
 	border: 2px solid yellow;
 	width: 50%;
 	display: grid;
-	grid-template-rows: 7rem 10rem 10rem 1fr;
+	grid-template-rows: 10rem 10rem 10rem 1fr;
 
 	&__header {
-		background-color: red;
+		color: #a07ba6;
+		font-size: 3rem;
+		display: grid;
+		place-items: center;
 	}
 
 	&__categories {
-		background-color: green;
+		// background-color: green;
+		border: 1px solid green;
 	}
 
 	&__start-btn-container {
