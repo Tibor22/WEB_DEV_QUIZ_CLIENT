@@ -35,7 +35,12 @@ export default function Header() {
 					<div className='user-details'>
 						<div className='username'>{state.user.name}</div>
 						{state.user.img && (
-							<img className='userImg' src={state.user.img} alt=''></img>
+							<img
+								referrerPolicy='no-referrer'
+								className='userImg'
+								src={state.user.img}
+								alt=''
+							></img>
 						)}
 						{!state.user.img && (
 							<img
