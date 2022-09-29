@@ -7,12 +7,14 @@ export default function SinglePlayer() {
 			<h1 className='singlePlayer-container__header'>SINGLE PLAY</h1>
 			<div className='singlePlayer-container__categories'>
 				<h2 className='singlePlayer-container__categories--header'></h2>
-				<h2 className='singlePlayer-container__categories--container'>
+				<div className='singlePlayer-container__categories--container'>
 					<Categories />
-				</h2>
+				</div>
 			</div>
 			<div className='singlePlayer-container__start-btn-container'>
-				<button className='singlePlayer-container__start-btn'></button>
+				<button className='singlePlayer-container__start-btn offset'>
+					START GAME
+				</button>
 			</div>
 
 			<div className='singlePlayer-container__leaderboard'></div>
