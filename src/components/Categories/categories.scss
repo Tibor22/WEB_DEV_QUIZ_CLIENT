@@ -1,5 +1,14 @@
 .categories-container {
-	width: 100%;
-	height: auto;
-	border: 1px solid brown;
+    width: 100%;
+    height: auto;
+    display: grid;
+    background-color: var(--color-primary);
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+
+    & span {
+        display: inline-block;
+        padding-block: 1rem;
+    }
 }

@@ -1,50 +1,54 @@
 .singlePlayer-container {
-	border: 2px solid yellow;
-	width: 50%;
-	display: grid;
-	grid-template-rows: 10rem 10rem 10rem 1fr;
+    // border: 2px solid yellow;
+    width: 50%;
+    display: grid;
+    grid-template-rows: 10rem auto 20rem 1fr;
 
-	&__header {
-		color: #a07ba6;
-		font-size: 3rem;
-		display: grid;
-		place-items: center;
-	}
+    &__header {
+        color: #a07ba6;
+        font-size: 3rem;
+        display: grid;
+        place-items: center;
+    }
 
-	&__categories {
-		// background-color: green;
-		border: 1px solid green;
-	}
+    &__categories {
+        &--header {
+            color: #a07ba6;
+            text-align: left;
+            padding-block: 1rem;
+            margin-left: 0.5rem;
+        }
+    }
 
-	&__start-btn-container {
-		display: flex;
-		align-items: center;
-		margin-left: 6rem;
-		& .singlePlayer-container__start-btn {
-			background: none;
-			border: 2px solid;
-			padding: 1.4rem 4rem;
-			color: #fff;
-			font-size: 2rem;
-			transition: 0.25s;
+    &__start-btn-container {
+        display: flex;
+        align-items: center;
+        margin-left: 6rem;
+        & .singlePlayer-container__start-btn {
+            background: none;
+            border: 2px solid;
+            padding: 1.4rem 4rem;
+            color: #fff;
+            font-size: 2rem;
+            transition: 0.25s;
 
-			&:hover,
-			&:focus {
-				border: 2px solid #fff;
-				color: #a07ba6;
-				cursor: pointer;
-			}
-		}
-		.offset {
-			box-shadow: 0 0 0 0 #a07ba6, inset 6em 3.5em 0 0 #a07ba6;
-			&:hover,
-			&:focus {
-				box-shadow: 0.3em 0.3em 0 0 #fff, inset 0.3em 0.3em 0 0 #fff;
-			}
-		}
-	}
+            &:hover,
+            &:focus {
+                border: 2px solid #fff;
+                color: #a07ba6;
+                cursor: pointer;
+            }
+        }
+        .offset {
+            box-shadow: 0 0 0 0 #a07ba6, inset 6em 3.5em 0 0 #a07ba6;
+            &:hover,
+            &:focus {
+                box-shadow: 0.3em 0.3em 0 0 #fff, inset 0.3em 0.3em 0 0 #fff;
+            }
+        }
+    }
 
-	&__leaderboard {
-		background-color: purple;
-	}
+    &__leaderboard {
+        background-color: purple;
+    }
 }
