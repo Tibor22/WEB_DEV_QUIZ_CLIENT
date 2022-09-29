@@ -1,4 +1,18 @@
 .singlePlayer-container {
   border: 2px solid yellow;
   width: 50%;
+  display: grid;
+  grid-template-rows: 7rem 10rem 10rem 1fr;
+}
+.singlePlayer-container__header {
+  background-color: red;
+}
+.singlePlayer-container__categories {
+  background-color: green;
+}
+.singlePlayer-container__start-btn-container {
+  background-color: yellow;
+}
+.singlePlayer-container__leaderboard {
+  background-color: purple;
 }/*# sourceMappingURL=singlePlayer.css.map */

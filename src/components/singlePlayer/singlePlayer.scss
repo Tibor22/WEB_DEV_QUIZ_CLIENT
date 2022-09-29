@@ -1,4 +1,22 @@
 .singlePlayer-container {
 	border: 2px solid yellow;
 	width: 50%;
+	display: grid;
+	grid-template-rows: 7rem 10rem 10rem 1fr;
+
+	&__header {
+		background-color: red;
+	}
+
+	&__categories {
+		background-color: green;
+	}
+
+	&__start-btn-container {
+		background-color: yellow;
+	}
+
+	&__leaderboard {
+		background-color: purple;
+	}
 }
