@@ -1,1 +1,1 @@
-{"version":3,"sources":["singlePlayer.scss","singlePlayer.css"],"names":[],"mappings":"AAAA;EACC,wBAAA;EACA,UAAA;EACA,aAAA;EACA,wCAAA;ACCD;ADCC;EACC,qBAAA;ACCF;ADEC;EACC,uBAAA;ACAF;ADGC;EACC,wBAAA;ACDF;ADIC;EACC,wBAAA;ACFF","file":"singlePlayer.css"}
+{"version":3,"sources":["singlePlayer.scss","singlePlayer.css"],"names":[],"mappings":"AAAA;EACC,wBAAA;EACA,UAAA;EACA,aAAA;EACA,yCAAA;ACCD;ADCC;EACC,cAAA;EACA,eAAA;EACA,aAAA;EACA,mBAAA;ACCF;ADEC;EAEC,uBAAA;ACDF;ADIC;EACC,wBAAA;ACFF;ADKC;EACC,wBAAA;ACHF","file":"singlePlayer.css"}

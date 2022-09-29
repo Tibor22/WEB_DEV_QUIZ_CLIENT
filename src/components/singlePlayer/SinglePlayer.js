@@ -4,7 +4,7 @@ import Categories from '../Categories/Categories.js';
 export default function SinglePlayer() {
 	return (
 		<div className='singlePlayer-container'>
-			<h1 className='singlePlayer-container__header'></h1>
+			<h1 className='singlePlayer-container__header'>SINGLE PLAY</h1>
 			<div className='singlePlayer-container__categories'>
 				<h2 className='singlePlayer-container__categories--header'></h2>
 				<h2 className='singlePlayer-container__categories--container'>
