@@ -1,8 +1,7 @@
 .singlePlayer-container {
-  border: 2px solid yellow;
   width: 50%;
   display: grid;
-  grid-template-rows: 10rem 10rem 10rem 1fr;
+  grid-template-rows: 10rem auto 20rem 1fr;
 }
 .singlePlayer-container__header {
   color: #a07ba6;
@@ -25,6 +24,7 @@
   color: #fff;
   font-size: 2rem;
   transition: 0.25s;
+  text-decoration: none;
 }
 .singlePlayer-container__start-btn-container .singlePlayer-container__start-btn:hover, .singlePlayer-container__start-btn-container .singlePlayer-container__start-btn:focus {
   border: 2px solid #fff;
@@ -38,5 +38,26 @@
   box-shadow: 0.3em 0.3em 0 0 #fff, inset 0.3em 0.3em 0 0 #fff;
 }
 .singlePlayer-container__leaderboard {
-  background-color: purple;
+  background-color: #a07ba6;
+}
+.singlePlayer-container__leaderboard--header {
+  color: white;
+  font-size: 2rem;
+  margin: 1.5rem 0rem;
+}
+.singlePlayer-container__leaderboard--table {
+  width: 100%;
+  border: 1px solid white;
+  color: white;
+}
+.singlePlayer-container__leaderboard--table tr th {
+  font-size: 1.6rem;
+}
+.singlePlayer-container__leaderboard--table tr td {
+  font-size: 1.2rem;
+}
+
+.noClick {
+  pointer-events: none;
+  opacity: 0.3;
 }/*# sourceMappingURL=singlePlayer.css.map */

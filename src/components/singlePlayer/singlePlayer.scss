@@ -1,8 +1,7 @@
 .singlePlayer-container {
-	border: 2px solid yellow;
 	width: 50%;
 	display: grid;
-	grid-template-rows: 10rem 10rem 10rem 1fr;
+	grid-template-rows: 10rem auto 20rem 1fr;
 
 	&__header {
 		color: #a07ba6;
@@ -27,6 +26,7 @@
 			color: #fff;
 			font-size: 2rem;
 			transition: 0.25s;
+			text-decoration: none;
 
 			&:hover,
 			&:focus {
@@ -45,6 +45,28 @@
 	}
 
 	&__leaderboard {
-		background-color: purple;
+		background-color: #a07ba6;
+		&--header {
+			color: white;
+			font-size: 2rem;
+			margin: 1.5rem 0rem;
+		}
+
+		&--table {
+			width: 100%;
+			border: 1px solid white;
+			color: white;
+			& tr th {
+				font-size: 1.6rem;
+			}
+			& tr td {
+				font-size: 1.2rem;
+			}
+		}
 	}
+}
+
+.noClick {
+	pointer-events: none;
+	opacity: 0.3;
 }
