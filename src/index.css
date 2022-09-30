@@ -4,13 +4,13 @@
   --color-primary-dark: #b1b2ff;
   --color-primary-light: #d2daff;
   --color-primary-extra-light: #eef1ff;
+  --color-secondary: #a07ba6;
   --font-family-primary: Montserrat, sans-serif;
   --font-family-secondary: Poppins, sans-serif;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -18,5 +18,4 @@
 html {
   font-size: 62.5%;
   font-family: var(--font-family-primary);
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

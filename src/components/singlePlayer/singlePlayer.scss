@@ -1,76 +1,76 @@
 .singlePlayer-container {
-    width: 50%;
-    display: grid;
-    grid-template-rows: 10rem auto 20rem 1fr;
+	width: 50%;
+	display: grid;
+	grid-template-rows: 10rem auto 20rem 1fr;
 
-    &__header {
-        color: #a07ba6;
-        font-size: 3rem;
-        display: grid;
-        place-items: center;
-    }
+	&__header {
+		color: #a07ba6;
+		font-size: 3rem;
+		display: grid;
+		place-items: center;
+	}
 
-    &__categories {
-        &--header {
-            color: #a07ba6;
-            text-align: left;
-            padding-block: 1rem;
-            margin-left: 0.5rem;
-        }
-    }
+	&__categories {
+		&--header {
+			color: #a07ba6;
+			text-align: left;
+			padding-block: 1rem;
+			margin-left: 0.5rem;
+		}
+	}
 
-    &__start-btn-container {
-        display: flex;
-        align-items: center;
-        margin-left: 6rem;
-        & .singlePlayer-container__start-btn {
-            background: none;
-            border: 2px solid;
-            padding: 1.4rem 4rem;
-            color: #fff;
-            font-size: 2rem;
-            transition: 0.25s;
-            text-decoration: none;
+	&__start-btn-container {
+		display: flex;
+		align-items: center;
+		margin-left: 6rem;
+		& .singlePlayer-container__start-btn {
+			background: none;
+			border: 2px solid;
+			padding: 1.4rem 4rem;
+			color: #fff;
+			font-size: 2rem;
+			transition: 0.25s;
+			text-decoration: none;
 
-            &:hover,
-            &:focus {
-                border: 2px solid #fff;
-                color: #a07ba6;
-                cursor: pointer;
-            }
-        }
-        .offset {
-            box-shadow: 0 0 0 0 #a07ba6, inset 6em 3.5em 0 0 #a07ba6;
-            &:hover,
-            &:focus {
-                box-shadow: 0.3em 0.3em 0 0 #fff, inset 0.3em 0.3em 0 0 #fff;
-            }
-        }
-    }
+			&:hover,
+			&:focus {
+				border: 2px solid #fff;
+				color: #a07ba6;
+				cursor: pointer;
+			}
+		}
+		.offset {
+			box-shadow: 0 0 0 0 #a07ba6, inset 6em 3.5em 0 0 #a07ba6;
+			&:hover,
+			&:focus {
+				box-shadow: 0.3em 0.3em 0 0 #fff, inset 0.3em 0.3em 0 0 #fff;
+			}
+		}
+	}
 
-    &__leaderboard {
-        background-color: #a07ba6;
-        &--header {
-            color: white;
-            font-size: 2rem;
-            margin: 1.5rem 0rem;
-        }
+	&__leaderboard {
+		background-color: #a07ba6;
+		&--header {
+			color: white;
+			font-size: 2rem;
+			margin: 1.5rem 0rem;
+		}
 
-        &--table {
-            width: 100%;
-            border: 1px solid white;
-            color: white;
-            & tr th {
-                font-size: 1.6rem;
-            }
-            & tr td {
-                font-size: 1.2rem;
-            }
-        }
-    }
+		&--table {
+			width: 100%;
+			border: 1px solid white;
+			color: white;
+			& tr th {
+				font-size: 1.6rem;
+			}
+			& tr td {
+				font-size: 1.2rem;
+			}
+		}
+	}
 }
 
 .noClick {
-    pointer-events: none;
-    opacity: 0.3;
+	pointer-events: none;
+	opacity: 0.3;
 }

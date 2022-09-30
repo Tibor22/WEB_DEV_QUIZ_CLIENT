@@ -6,6 +6,7 @@ $color-primary: #aac4ff;
 $color-primary-dark: #b1b2ff;
 $color-primary-light: #d2daff;
 $color-primary-extra-light: #eef1ff;
+$color-secondary: #a07ba6;
 $font-family-primary: 'Montserrat', sans-serif;
 $font-family-secondary: 'Poppins', sans-serif;
 
@@ -14,6 +15,7 @@ $font-family-secondary: 'Poppins', sans-serif;
 	--color-primary-dark: #{$color-primary-dark};
 	--color-primary-light: #{$color-primary-light};
 	--color-primary-extra-light: #{$color-primary-extra-light};
+	--color-secondary: #{$color-secondary};
 	--font-family-primary: #{$font-family-primary};
 	--font-family-secondary: #{$font-family-secondary};
 }

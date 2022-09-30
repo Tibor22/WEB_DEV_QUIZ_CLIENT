@@ -1,14 +1,41 @@
 .categories-container {
-    width: 100%;
-    height: auto;
-    display: grid;
-    background-color: var(--color-primary);
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-    gap: 1rem;
-    padding-top: 1rem;
+	width: 100%;
+	height: auto;
+	display: grid;
+	background-color: var(--color-primary);
+	grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+	gap: 1rem;
+	padding: 1rem;
 
-    & span {
-        display: inline-block;
-        padding-block: 1rem;
-    }
+	& span {
+		display: inline-block;
+		padding-block: 1rem;
+	}
+
+	& .category {
+		padding: 0.5rem;
+		border-radius: 8px;
+		transition: all 0.3s;
+		&:hover {
+			background-color: var(--color-secondary);
+			cursor: pointer;
+		}
+	}
+}
+
+.selected {
+	background-color: var(--color-secondary);
+}
+
+.noClick {
+	pointer-events: none;
+	opacity: 0.3;
+}
+.selected.noClick {
+	background-color: var(--color-secondary);
+	pointer-events: auto;
+	opacity: 1;
+}
+.selected.noClick span {
+	color: white;
 }
