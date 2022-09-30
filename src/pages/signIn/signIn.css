@@ -1,18 +1,15 @@
 .signIn-outer-container {
   min-height: calc(100vh - 35rem);
   background-color: var(--color-primary-light);
-  display: -ms-grid;
   display: grid;
   height: 100vh;
-  -ms-grid-rows: 8rem 1fr auto 10rem;
-      grid-template-rows: 8rem 1fr auto 10rem;
+  grid-template-rows: 8rem 1fr auto 10rem;
 }
 
 .signIn-container {
   max-width: 120rem;
   height: 100%;
   margin: 0 auto;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -20,117 +17,78 @@
 .signIn-component {
   width: 40rem;
   height: 40rem;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 4rem;
-  -webkit-box-shadow: 9px 8px 10px -9px rgba(0, 0, 0, 0.79);
   box-shadow: 9px 8px 10px -9px rgba(0, 0, 0, 0.79);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   right: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .signIn-component__header {
   text-align: left;
   font-size: 2rem;
   font-weight: 600;
   color: var(--color-primary-dark);
 }
-
 .signIn-component__legal {
   text-align: left;
   margin-top: 1.5rem;
   font-size: 1.1rem;
   font-family: var(--font-family-primary);
 }
-
 .signIn-component__login-btns {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   gap: 2rem;
 }
-
 .signIn-component__login-btns a {
   text-decoration: none;
   font-size: 1.3rem;
 }
-
 .signIn-component__login-btns a .google-text {
   display: inline-block;
   margin-left: 0.8rem;
   color: black;
 }
-
 .signIn-component__login-btns .sign-in-btn {
   padding: 1.6rem;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.329);
   border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 55px;
   font-family: var(--font-family-primary);
 }
-
 .signIn-component__login-btns .sign-in-btn:hover {
   background-color: var(--color-primary-extra-light);
   cursor: pointer;
 }
-
 .signIn-component__login-btns .sign-in-btn .google-icon {
   display: inline-block;
 }
-
 .signIn-component__login-btns .divider {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 .signIn-component__login-btns .divider::after,
 .signIn-component__login-btns .divider::before {
-  content: '';
+  content: "";
   border: 0.5px solid rgba(211, 211, 211, 0.542);
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .signIn-component__login-btns .divider:not(:empty)::before {
   margin-right: 1rem;
 }
-
 .signIn-component__login-btns .divider:not(:empty)::after {
   margin-left: 1rem;
-}
-/*# sourceMappingURL=signIn.css.map */
+}/*# sourceMappingURL=signIn.css.map */

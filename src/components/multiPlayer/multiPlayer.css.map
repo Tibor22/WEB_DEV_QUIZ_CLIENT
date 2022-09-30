@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,sBAAsB,CAAC;EACtB,MAAM,EAAE,eAAe;EACvB,KAAK,EAAE,GAAG;CACV",
-    "sources": [
-        "multiPlayer.scss"
-    ],
-    "names": [],
-    "file": "multiPlayer.css"
-}
+{"version":3,"sources":["multiPlayer.scss","multiPlayer.css"],"names":[],"mappings":"AAAA;EACC,uBAAA;EACA,UAAA;ACCD","file":"multiPlayer.css"}

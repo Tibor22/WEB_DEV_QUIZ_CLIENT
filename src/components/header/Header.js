@@ -33,7 +33,7 @@ export default function Header() {
 						<img src={logo} alt='' />
 					</div>
 					<div className='user-details'>
-						<div className='username'>{state.user.name}</div>
+						<div className='username'>{state.user.name.split(' ')[0]}</div>
 						{state.user.img && (
 							<img
 								referrerPolicy='no-referrer'

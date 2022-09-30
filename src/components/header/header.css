@@ -2,61 +2,63 @@
   background-color: var(--color-primary);
   font-size: 2rem;
 }
-
 .header-outer-container .header-container {
   background-color: var(--color-primary);
   height: 8rem;
   max-width: 120rem;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .header-outer-container .header-container-flex {
   background-color: var(--color-primary);
   height: 8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 120rem;
   margin: 0 auto;
+  position: relative;
 }
-
+.header-outer-container .header-container-flex .logo {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
 .header-outer-container .header-container-flex .logo img {
   width: 100%;
   height: 100%;
 }
-
+.header-outer-container .header-container-flex .username {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
 .header-outer-container .header-container-flex .user-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 2rem;
 }
-
 .header-outer-container .header-container-flex .userImg {
-  width: 6rem;
-  height: 6rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
 }
 
 .logout {
-  z-index: 99999999999999999;
+  font-family: montserrat;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  padding-block: 0.8rem;
+  padding-inline: 1rem;
+  border: 3px solid white;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
 }
-/*# sourceMappingURL=header.css.map */
+.logout:hover {
+  color: var(--color-primary);
+  background-color: white;
+}/*# sourceMappingURL=header.css.map */

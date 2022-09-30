@@ -12,7 +12,7 @@ export default function SignIn() {
 		dispatch({
 			type: 'LOGIN',
 			payload: {
-				name: 'Signed in as guest',
+				name: 'Guest',
 				type: 'guest',
 				isAuthenticated: false,
 			},
