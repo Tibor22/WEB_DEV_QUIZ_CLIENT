@@ -2,8 +2,9 @@ import './App.css';
 
 import SignIn from './pages/signIn/SignIn.js';
 import Lobby from './pages/lobby/Lobby.js';
+import SinglePlay from './pages/single-play/SinglePlay.js';
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
 	{
 		path: '/lobby',
 		element: <Lobby />,
+	},
+	{
+		path: '/single-play',
+		element: <SinglePlay />,
 	},
 ]);
 
