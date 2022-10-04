@@ -31,7 +31,7 @@ export default function SinglePlayer() {
 			</div>
 			<div className='singlePlayer-container__start-btn-container'>
 				<Link
-					to='/game'
+					to='/single-play'
 					state={{ category: category }}
 					className={`singlePlayer-container__start-btn offset ${
 						category ? '' : 'noClick'
