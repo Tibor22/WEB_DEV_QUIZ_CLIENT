@@ -23,14 +23,6 @@ export default function SinglePlay() {
 
 	let lastQuestion = useRef();
 
-	function shuffle(arr) {
-		if (!arr.length) return [];
-		const index = 0 | (Math.random() * arr.length);
-		return [
-			arr[index],
-			...shuffle([...arr.splice(0, index), ...arr.splice(1)]),
-		];
-	}
 	let myInterval;
 	useEffect(() => {
 		// create a interval and get the id
@@ -61,8 +53,6 @@ export default function SinglePlay() {
 			<div className='single-play-container'>
 				{questions &&
 					questions.slice(iteration, iteration + 1).map((question, i) => {
-						// question.options = shuffle(question.options);
-
 						return (
 							<div className='single-play-inner-container'>
 								<div className='timer'>{timer}</div>
