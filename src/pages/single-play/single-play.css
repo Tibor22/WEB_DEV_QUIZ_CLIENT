@@ -30,6 +30,9 @@
   place-items: center;
   padding: 2rem 3rem;
 }
+.single-play-container .single-play-inner-container__question .code {
+  white-space: pre-wrap;
+}
 .single-play-container .single-play-inner-container__options {
   border-radius: 8px;
   display: grid;
@@ -101,9 +104,17 @@
   background-color: var(--color-secondary);
 }
 
-.selected {
+.selected-option {
   border: 5px solid var(--color-secondary);
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   transform: translate(-5px, -5px);
+}
+
+.option.right-answer {
+  background-color: rgb(183, 214, 183) !important;
+}
+
+.option.wrong-answer {
+  background-color: rgb(218, 120, 107) !important;
 }/*# sourceMappingURL=single-play.css.map */

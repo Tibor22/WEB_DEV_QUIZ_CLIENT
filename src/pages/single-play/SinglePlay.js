@@ -2,19 +2,24 @@ import './single-play.css';
 import Header from '../../components/header/Header.js';
 import Footer from '../../components/footer/Footer.js';
 import { useEffect, useState, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 export default function SinglePlay() {
 	const [questions, setQuestions] = useState([]);
 	let [iteration, setIteration] = useState(0);
-	let [timer, setTimer] = useState(10);
+	let [timer, setTimer] = useState(30);
 	const [answer, setAnswer] = useState(null);
 	const [rightAnswers, setRightAnswers] = useState(0);
 
+	//category
+	let location = useLocation();
+
+	console.log(location.state);
 	const url = process.env.REACT_APP_API_URL;
 	useEffect(() => {
 		const getQuestions = async () => {
-			const data = await axios.get(`${url}/question`);
+			const data = await axios.get(`${url}/question/nodeJS`);
 
 			console.log(data);
 			setQuestions(data.data.data);
@@ -24,11 +29,6 @@ export default function SinglePlay() {
 	}, []);
 
 	let lastQuestion = useRef();
-	let option0 = useRef();
-	let option1 = useRef();
-	let option2 = useRef();
-	let option3 = useRef();
-
 	let myInterval;
 	useEffect(() => {
 		// create a interval and get the id
@@ -45,13 +45,13 @@ export default function SinglePlay() {
 		// clear out the interval using the id when unmounting the component
 		return () => clearInterval(myInterval);
 	}, [timer]);
-	console.log('RIGHT ANSWER ID:', questions[iteration]?.id == answer);
 	if (timer < 0) {
-		if (questions[iteration].id == answer) {
+		if (questions[iteration].answer === answer) {
 			setRightAnswers((prevAnswers) => prevAnswers + 1);
 		}
+		setAnswer(null);
 		setIteration((iteration += 1));
-		setTimer((prevTime) => prevTime + 10);
+		setTimer((prevTime) => prevTime + 30);
 
 		// add point if answer was correct
 	}
@@ -59,13 +59,16 @@ export default function SinglePlay() {
 		lastQuestion.current = true;
 	}
 
-	const chooseAnswer = (e) => {
-		console.log(e.target);
-		setAnswer(e.target.id);
+	const chooseAnswer = (answer) => {
+		if (timer < 1) return;
+		setAnswer(answer);
 	};
-	console.log('RIGHT ANSWERS:', rightAnswers);
-	console.log('ANSWER ID:', answer);
-	// console.log('OPTION0', option0.current.id);
+
+	const handleSubmit = () => {
+		if (answer) {
+			setTimer(0);
+		}
+	};
 	return (
 		<div className='single-play-outer-container'>
 			<Header />
@@ -77,99 +80,48 @@ export default function SinglePlay() {
 							<div key={i} className='single-play-inner-container'>
 								<div className='timer'>{timer}</div>
 								<div className='single-play-inner-container__question'>
-									{question.text}
+									<code class='language-javascript'> {question.text}</code>
 								</div>
 								<div className='single-play-inner-container__options'>
-									<div
-										onClick={chooseAnswer}
-										className={`option option--1 ${
-											option0.current?.id == answer ? 'selected' : ''
-										}`}
-									>
-										{option0.current?.id == answer && (
-											<img
-												src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-												alt=''
-											/>
-										)}
-										<div className='option-letter'>A</div>
-										<div
-											ref={option0}
-											className='option-text'
-											id={question.options[0].id}
-										>
-											{question.options[0].text}
-										</div>
-									</div>
-
-									<div
-										onClick={chooseAnswer}
-										className={`option option--2 ${
-											option1.current?.id == answer ? 'selected' : ''
-										}`}
-									>
-										{option1.current?.id == answer && (
-											<img
-												src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-												alt=''
-											/>
-										)}
-										<div className='option-letter'>B</div>
-										<div
-											ref={option1}
-											className='option-text'
-											id={question.options[1].id}
-										>
-											{question.options[1].text}
-										</div>
-									</div>
-									<div
-										onClick={chooseAnswer}
-										className={`option option--3 ${
-											option2.current?.id == answer ? 'selected' : ''
-										}`}
-									>
-										{option2.current?.id == answer && (
-											<img
-												src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-												alt=''
-											/>
-										)}
-										<div className='option-letter'>C</div>
-										<div
-											ref={option2}
-											className='option-text'
-											id={question.options[2].id}
-										>
-											{question.options[2].text}
-										</div>
-									</div>
-									<div
-										onClick={chooseAnswer}
-										className={`option option--4 ${
-											option3.current?.id == answer ? 'selected' : ''
-										}`}
-									>
-										{option3.current?.id == answer && (
-											<img
-												src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-												alt=''
-											/>
-										)}
-										<div className='option-letter'>D</div>
-										<div
-											ref={option3}
-											className='option-text'
-											id={question.options[3].id}
-										>
-											{question.options[3].text}
-										</div>
-									</div>
+									{question.options.map((option, i) => {
+										const map = { 0: 'A', 1: 'B', 2: 'C', 3: 'D' };
+										return (
+											<div
+												onClick={() => chooseAnswer(option.text)}
+												className={`option option--${i} ${
+													option.text === answer ? 'selected-option' : ''
+												} ${
+													timer === 0 &&
+													timer === 0 &&
+													question.answer == option.text
+														? 'right-answer'
+														: ''
+												}${
+													timer === 0 &&
+													timer === 0 &&
+													question.answer !== option.text
+														? 'wrong-answer'
+														: ''
+												}`}
+											>
+												{option.text == answer && (
+													<img
+														src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
+														alt=''
+													/>
+												)}
+												<div className='option-letter'>{map[i]}</div>
+												<div className='option-text'>{option.text}</div>
+											</div>
+										);
+									})}
 								</div>
 							</div>
 						);
 					})}
-				<div className='next-btn'>Submit answer</div>
+				<div onClick={handleSubmit} className='next-btn'>
+					Submit answer
+				</div>
 			</div>
 
 			<Footer />

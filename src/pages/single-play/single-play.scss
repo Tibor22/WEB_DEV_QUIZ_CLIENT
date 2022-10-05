@@ -28,6 +28,9 @@
 			display: grid;
 			place-items: center;
 			padding: 2rem 3rem;
+			& .code {
+				white-space: pre-wrap;
+			}
 		}
 
 		&__options {
@@ -110,9 +113,16 @@
 	}
 }
 
-.selected {
+.selected-option {
 	border: 5px solid var(--color-secondary);
 	width: calc(100% + 10px);
 	height: calc(100% + 10px);
 	transform: translate(-5px, -5px);
+}
+
+.option.right-answer {
+	background-color: rgb(183, 214, 183) !important;
+}
+.option.wrong-answer {
+	background-color: rgb(218, 120, 107) !important;
 }
