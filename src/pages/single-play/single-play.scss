@@ -28,6 +28,9 @@
 			display: grid;
 			place-items: center;
 			padding: 2rem 3rem;
+			& .code {
+				white-space: pre-wrap;
+			}
 		}
 
 		&__options {
@@ -91,4 +94,35 @@
 		font-weight: bold;
 		color: var(--color-secondary);
 	}
+}
+
+.next-btn {
+	font-size: 1.6rem;
+	padding: 0.7rem 1.5rem;
+	margin-top: 1rem;
+	border: 1px solid white;
+	color: white;
+	background-color: var(--color-primary-dark);
+
+	transition: all 0.3s;
+
+	&:hover {
+		cursor: pointer;
+		transform: translateY(-2px);
+		background-color: var(--color-secondary);
+	}
+}
+
+.selected-option {
+	border: 5px solid var(--color-secondary);
+	width: calc(100% + 10px);
+	height: calc(100% + 10px);
+	transform: translate(-5px, -5px);
+}
+
+.option.right-answer {
+	background-color: rgb(183, 214, 183) !important;
+}
+.option.wrong-answer {
+	background-color: rgb(218, 120, 107) !important;
 }
